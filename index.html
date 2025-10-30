@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>কম দামে বেশি এমবি কিনুন</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>কম দামে এমবি কিনুন</header>
+
+<main>
+    <!-- 📶 এমবি প্যাকেজ -->
+    <section id="packages" class="page active">
+        <h2>📶 এমবি প্যাকেজ</h2>
+        <div id="packageContainer"></div>
+    </section>
+
+    <!-- 💰 ব্যালেন্স -->
+    <section id="balance" class="page">
+        <h2>💰 ব্যালেন্স</h2>
+        <div class="box" id="balanceBox">লোড হচ্ছে...</div>
+    </section>
+
+    <!-- 💸 টাকা এড -->
+    <section id="addMoney" class="page">
+        <h2>💸 টাকা এড</h2>
+        <div class="box">
+            <label>নাম্বার:</label>
+            <input type="text" id="sendNumber" placeholder="যেই নাম্বার থেকে টাকা পাঠানো হয়েছে ওই নাম্বার লেখুন">
+            <label>পরিমাণ (৳):</label>
+            <input type="number" id="sendAmount" placeholder="টাকা সংখ্যা লেখুন">
+            <button class="btn" style="margin-top:10px;" onclick="sendMoney()">পাঠান</button>
+            <p id="sendResult" style="margin-top:10px;"></p>
+        </div>
+    </section>
+
+    <!-- 👤 প্রোফাইল -->
+    <section id="profile" class="page">
+        <h2>👤 প্রোফাইল</h2>
+        <div class="box" id="profileBox">লোড হচ্ছে...</div>
+    </section>
+
+    <!-- 📜 ট্রানজেকশন হিস্টরি -->
+    <section id="history" class="page">
+        <h2>📜 ট্রানজেকশন হিস্টরি</h2>
+        <div class="box" id="historyList">লোড হচ্ছে...</div>
+    </section>
+</main>
+
+<nav>
+    <button class="active" onclick="showPage('packages', this)">📶 প্যাকেজ</button>
+    <button onclick="showPage('balance', this)">💰 ব্যালেন্স</button>
+    <button onclick="showPage('addMoney', this)">💸 টাকা এড</button>
+    <button onclick="showPage('profile', this)">👤 প্রোফাইল</button>
+    <button onclick="showPage('history', this)">📜 হিস্টরি</button>
+</nav>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
